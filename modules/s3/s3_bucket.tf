@@ -61,7 +61,7 @@ data "aws_iam_policy_document" "s3_compliant_bucket_policy" {
     }
   }
 }
-
+#text
 resource "aws_s3_bucket" "S3_Compliant_Bucket" {
   count           = var.infra_type == "compliant" ? var.var_count : 0
   bucket          = "${var.env_name}-${var.infra_type}-bucket-${count.index + 1}"
